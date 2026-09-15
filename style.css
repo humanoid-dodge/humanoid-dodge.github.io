@@ -612,6 +612,7 @@ img {
 }
 
 .teaser-image {
+  height: auto;
   border: 3px solid var(--border-light) !important;
 }
 
