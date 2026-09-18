@@ -56,8 +56,12 @@
       alt="Humanoid Dodgeball overview showing adversarial motion priors, threat calculation, reward design, and deployment on a humanoid robot."
       class="teaser-image" width="2700" height="964" />
     <p class="figure-caption">
-      Overview of Humanoid Dodgeball: adversarial motion priors from human dodge motions, threat calculation,
-      threat-aware reward design, and deployment on a humanoid robot using motion capture.
+      Overview of <em>Humanoid Dodgeball</em>. During simulation training, predictive and near-field threat for key bodies
+      are computed to characterize incoming projectile hazards and guide threat-aware reward shaping for whole-body
+      evasion. Direction-specific adversarial motion priors, selected according to the root escape direction, regularize
+      the learned behaviors toward diverse and natural human-like dodge motions. When the threat subsides, recovery
+      rewards, including orientation and capture-point objectives, encourage rapid stabilization. During hardware
+      deployment, the trained actor is executed using obstacle positions estimated from the motion-capture system.
     </p>
 
     <!-- Remove hidden and uncomment the video card below when your first clip is ready. -->
