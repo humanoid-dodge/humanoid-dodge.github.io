@@ -1,0 +1,4 @@
+.DS_Store
+
+# Keep the original export locally; publish the smaller H.264 copy.
+/assets/videos/ICRA_video_final.mp4

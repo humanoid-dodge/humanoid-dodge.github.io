@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Humanoid Dodgeball: Learning Fast Dynamic Obstacle Avoidance Motions for Humanoids.">
+  <title>Humanoid Dodgeball: Learning Fast Dynamic Obstacle Avoidance Motions for Humanoids</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="main-content">
+    <div class="hero-flow">
+      <div class="hero-orb" aria-hidden="true"></div>
+      <div class="hero-text">Humanoid Dodgeball</div>
+      <div class="sub-hero-text">Learning Fast Dynamic Obstacle Avoidance Motions for Humanoids</div>
+
+      <div class="authors">
+        anonymous
+      </div>
+
+      <div class="hero-waves" aria-hidden="true">
+        <svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+          </defs>
+          <g class="wave-parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(212,148,10,0.25)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(147,51,234,0.2)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(59,130,246,0.18)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(37,99,235,0.25)"></use>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <section id="videos" class="section card-surface video-section" aria-labelledby="videos-heading">
+      <h2 id="videos-heading" class="section-heading">Videos</h2>
+      <div class="video-grid">
+        <figure class="video-card">
+          <video controls playsinline preload="metadata" width="1280" height="720"
+            aria-label="Humanoid Dodgeball supplementary video">
+            <source src="./assets/videos/ICRA_video_web.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+            <a href="./assets/videos/ICRA_video_web.mp4">Download the video</a> to watch it.
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <section id="abstract" class="section card-surface" aria-labelledby="abstract-heading">
+      <h2 id="abstract-heading" class="section-heading">Abstract</h2>
+      <p>
+        Humanoids have become increasingly agile and capable in real-world environments. To operate safely in dynamic
+        scenarios, they must rapidly evade fast-moving obstacles while maintaining stability and physically feasible
+        whole-body motion. Learning such behaviors remains challenging due to the high-dimensional dynamics of humanoid
+        systems and the need to jointly balance reactive obstacle avoidance, motion naturalness, and control robustness.
+        In this work, we present <em>Humanoid Dodgeball</em>, a reinforcement learning (RL) framework for agile dynamic
+        obstacle avoidance in humanoids. Our method enables highly dynamic whole-body evasive maneuvers against incoming
+        projectiles through threat-aware reward shaping, while multiple direction-specific adversarial motion priors
+        regularize the learned behaviors toward stable and diverse human-like motions. Extensive simulation and hardware
+        experiments demonstrate that the proposed framework substantially improves dynamic obstacle avoidance performance
+        across diverse obstacle speeds and launch distances, while preserving robust and physically plausible humanoid
+        motions.
+      </p>
+    </section>
+
+    <!-- Teaser Figure -->
+    <img src="./figs/humanoid-dodgeball-overview.png"
+      alt="Humanoid Dodgeball overview showing adversarial motion priors, threat calculation, reward design, and deployment on a humanoid robot."
+      class="teaser-image" width="2700" height="964" />
+    <p class="figure-caption">
+      Overview of <em>Humanoid Dodgeball</em>. During simulation training, predictive and near-field threat for key bodies
+      are computed to characterize incoming projectile hazards and guide threat-aware reward shaping for whole-body
+      evasion. Direction-specific adversarial motion priors, selected according to the root escape direction, regularize
+      the learned behaviors toward diverse and natural human-like dodge motions. When the threat subsides, recovery
+      rewards, including orientation and capture-point objectives, encourage rapid stabilization. During hardware
+      deployment, the trained actor is executed using obstacle positions estimated from the motion-capture system.
+    </p>
+
+  </main>
+</body>
+</html>
